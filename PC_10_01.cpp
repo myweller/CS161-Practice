@@ -61,13 +61,14 @@ int main()
 	double scoreAvg = avgArray(myArray, size);
 	userOutput(myArray, size, scoreAvg);
 
-	// free allocated heap memory from array to avoid memory leaks
-	delete[] myArray;
 	
 	//keeps window open in Visual Studio
 	cin.get();						
 	cin.ignore();
-	
+
+	// free allocated heap memory from array to avoid memory leaks
+	delete[] myArray;
+
 	return 0;
 }
 
@@ -95,7 +96,7 @@ double avgArray(double avgedArray[], int s)
 	double total = 0;
 	for (int count = 0; count < s; count++)
 	{
-		total += avgedArray[count];
+		total += *(avgedArray+count);
 	}
 	//calculate average by dividing total by array size
 	double avg = total / s;
@@ -111,7 +112,7 @@ void userOutput(double finalArray[], int s, double avg)
 	int position = 1;
 	for (int count = 0; count < s; count++)
 	{
-		cout << "Score " <<position<<" "<<finalArray[count] << endl;
+		cout << "Score " <<position<<" "<<*(finalArray+count) << endl;
 		position++;
 	}
 
