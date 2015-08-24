@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{	
+
+	//User input:  how many scores do you want to log?
+	//initizlie an array of doubles size == cin above 
+
+	//Loop User input:  Please enter score number (array.count) , count++
+		//nested loop:  if cin <0
+						//cout:  error msg
+						//user input:  tryin again
+
+
+	//sort(int [] myarray, size) 
+	//{std::sort(myarray, myarray + size)
+	//	avg(int [] myarray, size)}
+	
+	//avg(int [] myarray, size)
+	//{loop through array
+	//	+=totalScores
+	//	avgScores = totalScores/size;
+	//	pushback avg Scores into the array
+	//}
+
+	//userOutput(int [] myarray, size)
+	//loop through the list of scores
+	//if else to cout all scores except size-1
+	//if size-1 cout average score is myarray[size-1]
+
+	return 0;
+}
