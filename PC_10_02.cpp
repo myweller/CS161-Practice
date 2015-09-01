@@ -92,6 +92,8 @@ int main()
 	//keeps window open in Visual Studio
 	cin.get();						
 	cin.ignore();
+	cout << "Press any key to end the program" << endl;
+
 
 	// free allocated heap memory from array to avoid memory leaks
 	delete[] nameAndScore;	
@@ -122,7 +124,7 @@ int getValidScore(int minValue, string prompt, string errMsg)
 		{
 			// user gave invalid input
 			cout << errMsg << endl;
-			cin >> input;
+			
 		}
 		else {
 			// user gave valid input
